@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Carrois+Gothic">
+	<title>Conheça nosso estúdio</title>
+	<style>
+		* {
+			box-sizing: border-box;
+			margin: 0px;
+			padding: 0px;
+			font-family: Carrois Gothic;
+		}
+
+		header {
+			background-color: #000000;
+			display: flex;
+  			justify-content: center;
+ 			align-items: center;
+ 			padding: 10px;
+		}
+
+		nav {
+			position: -webkit-sticky;
+			position: sticky;
+			top: 0;
+ 			z-index: 1000;
+  			width: 100%;
+		}
+
+		nav ul {
+  			display: flex;
+  			justify-content: center;
+  			list-style: none;
+  			padding: 0;
+  			margin: 0;
+		}
+
+		ul.navegador {
+			list-style-type: none;
+			overflow: hidden;
+			background-color: #fc0000;
+		}
+
+		nav li a:hover:not(.active){
+			color: #000000;}
+
+		nav li a{
+			display: block;
+			color: white;
+			font-size: 20px;
+			padding: 18px 20px;
+			text-decoration: none;
+    		position: relative;
+		}
+
+		nav li a::after{
+			content: '';
+    		position: absolute;
+    		width: 0;
+   	 		height: 2px;
+    		bottom: 0;
+    		left: 50%;
+    		background-color: #FFFFFF;
+    		transition: all 0.3s ease;
+			text-decoration: underline; 
+			color: #fc0000;
+		}
+
+		nav li a:hover::after{
+			width: 100%;
+    		left: 0;
+    	}
+
+		body {
+			background-image: url(Imagens/studio.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			display: flex;
+ 			flex-direction: column;
+		}
+
+		main {
+			color: #ff9100;
+			margin-left: 20%;
+			margin-right: 20%;
+			padding: 20px;
+		}
+
+		h1 {
+			color: #ff9100;
+			margin-top: 3%;
+			text-align: center;
+		}
+
+		p {
+			margin: 1%;
+			padding: 2px;
+		}
+
+		div.content, div.contentdois {
+			margin-top: 2%;
+			background-color: #000000;
+			border-radius: 10px;
+			text-align: justify;
+			padding: 10px;
+		}
+
+
+		div.table-container {
+   			width: 100%;
+    		overflow-x: auto;
+    	}
+
+		table {
+			text-decoration: none;
+			color: #ff9100;
+			font-family: Arial;
+			border-collapse: collapse;
+			border-color: #ff9100;
+    		width: 100%;
+  			margin-top: 5%;
+		}
+		
+		table th {
+			padding: 10px;
+		}
+
+		table td {
+			margin: 2%;
+		}
+
+		footer{
+			background-color: #fc0000;
+			color: white;
+			width: 100%;
+			flex-shrink: 0px;
+		}
+
+		ul.foot {
+			margin: 0;
+			padding: 10px;
+		}
+
+		ul.foot li a {
+			text-decoration: none;
+			color: #FFFFFF;
+		}
+
+	p.foo {
+			padding: 5px;
+		}
+
+
+@media screen and (max-width: 900px) {
+				ul.navegador li{float: none;}
+				ul.navegador li a{font-family: Carrois Gothic;}
+
+		nav ul {
+			flex-direction: column;
+  			align-items: center;
+  			list-style: none;
+  			padding: 0;
+  			margin: 0;
+			}
+
+			main {
+			color: #ff9100;
+			margin-left: 1%;
+			margin-right: 1%;
+			padding: 20px;
+			}
+
+			table {
+			width: 100%;
+			margin-left: 2%;
+			margin-right: 2%;
+			}
+
+			.table-container {
+    		overflow-x: auto;
+			}
+		}
+
+	</style>
+</head>
+<body>
+	<header>
+	<div class="container">
+		<a href="Index.html" id="logo" class="logo"><img src="Imagens/Alisom2.png" alt="Alisom" width="200px"></a>
+	</div>
+	</header>
+	<nav>
+		<ul class="navegador">
+			<li><a href="Index.html">Início</a></li>
+			<li><a href="Estudio.html">Conheça nosso estúdio</a></li>
+			<li><a href="Contato.html">Contato</a></li>
+		</ul>
+	</nav>
+	<main>
+		<div class="content">
+		<div class="table-container">
+			<h1>Nossos equipamentos e softwares</h1>
+			<table border="1">
+			<tr>
+				<th><center>Equipamento</center></th>
+				<th><center>Modelo</center></th>
+				<th><center>Descrição</center></th>
+			</tr>
+			<tr>
+				<td rowspan="2"><center><img src="Imagens/equipamento01.jpg" alt="monitor" width="200px"></center></td>
+				<td><center>Yamaha HS8</center></td>
+				<td><center>Monitores de referência amplamente utilizados em estúdios profissionais, oferecendo resposta plana e precisão essencial para mixagens críticas.</center></td>
+			</tr>
+			<tr>
+				<td><center>Genelec 8040B</center></td>
+				<td><center>Sistema de monitoramento de alto padrão com imagem estéreo precisa e definição excepcional em todas as frequências</center></td>
+			<tr>
+				<td rowspan="2"><center><img src="Imagens/equipamento02.jpg" alt="interface" width="200px"></center></td>
+				<td><center>Universal Audio Apollo Twin X</center></td>
+				<td><center>Interface profissional com conversores de alta qualidade e processamento DSP integrado, permitindo gravações com plugins em tempo real.</center></td>	
+			</tr>
+			<tr>
+				<td><center>RME Fireface UFX II</center></td>
+				<td><center>Interface de nível profissional com estabilidade lendária e conversão de áudio extremamente transparente.</center>
+				</td>	
+			</tr>
+			<tr>
+				<td rowspan="3"><center><img src="Imagens/equipamento03.jpg" alt="microfone" width="200px"></center></td>
+				<td><center>Neumann U87 Ai</center></td>
+				<td><center>Um dos microfones mais icônicos da indústria, conhecido pela clareza, presença e riqueza sonora em gravações vocais.</center></td>	
+			</tr>
+			<tr>
+				<td><center>Shure SM7B</center></td>
+				<td><center>Microfone dinâmico amplamente utilizado em vocais profissionais, com excelente controle de ruído e resposta suave.</center></td>
+			</tr>
+			<tr>
+				<td><center>AKG C414 XLII</center></td>
+				<td><center>Microfone versátil com múltiplos padrões polares, ideal para gravação de vocais e instrumentos com alta precisão.</center></td>
+			</tr>
+			<tr>
+				<td><center><img src="Imagens/equipamento04.jpg" alt="controlador" width="200px"></center></td>
+				<td><center>Native Instruments Komplete Kontrol S61 MK3</center></td>
+				<td><center>Controlador MIDI profissional com integração avançada, oferecendo controle total sobre instrumentos virtuais e produção musical.</center></td>
+			<tr>
+				<td rowspan="2"><center><img src="Imagens/equipamento05.jpg" alt="fones" width="200px"></center></td>
+				<td><center>Beyerdynamic DT 1990 Pro</center></td>
+				<td><center>Fones de referência abertos com extrema definição e imagem estéreo detalhada para mixagem.</center></td>
+			</tr>
+			<tr>
+				<td><center>Audeze LCD-X</center></td>
+				<td><center>Fones planares de nível profissional, utilizados em masterização por sua precisão sonora.</center></td>
+			</tr>
+			<tr>
+				<td rowspan="2"><center><img src="Imagens/equipamento06.jpg" alt="daw" width="200px"></center></td>
+				<td><center>Pro Tools</center></td>
+				<td><center>Padrão da indústria para gravação, edição e mixagem em estúdios profissionais.</center></td>
+			</tr>
+			<tr>
+				<td><center>Logic Pro</center></td>
+				<td><center>Plataforma completa para produção musical, com ampla biblioteca sonora e ferramentas avançadas.</center></td>
+			</tr>
+			<tr>
+				<td><center><img src="Imagens/equipamento07.jpg" alt="pedestal" width="200px"></center></td>
+				<td><center>K&M 210/9 Microphone Stand</center></td>
+				<td><center>Suporte profissional robusto, padrão em estúdios comerciais.</center></td>
+			</tr>
+			<tr>
+				<td><center><img src="Imagens/equipamento08.jpg" alt="Guitarra" width="200px"></center></td>
+				<td><center>Mogami Gold Studio XLR Cable</center></td>
+				<td><center>Cabos de alta qualidade que garantem transmissão de sinal limpa e sem interferências.</center></td>
+			</tr>
+			<tr>
+				<td><center><img src="Imagens/equipamento09.jpg" alt="Guitarra" width="200px"></center></td>
+				<td><center>Stedman Proscreen XL</center></td>
+				<td><center>Pop filter metálico de nível profissional para gravações vocais precisas.</center></td>
+			</tr>
+			</table>
+		</div>
+		</div>
+		<div class="contentdois">
+		<div class="table-container">
+			<h1>Alguns dos nossos instrumentos</h1>
+			<table border="1">
+			<tr>
+				<th><center>Instrumento</center></th>
+				<th><center>Modelo</center></th>
+				<th><center>Descrição</center></th>
+			</tr>
+			<tr>
+				<td><center><img src="Imagens/instrumento01.jpg" alt="violao" width="200px"></center></td>
+				<td><center>Violão Eagle Ch70 Nt Elétrico Jumbo Natural Com Capa Jumbo Destro</center></td>
+				<td><center>O violão é a alma acústica do estúdio. Com seu som quente e envolvente, ele traz uma conexão direta com a emoção da música. Seja em dedilhados suaves ou batidas marcantes, é o instrumento perfeito para composições intimistas e arranjos cheios de sensibilidade.</center></td>
+			</tr>
+			<tr>
+				<td><center><img src="Imagens/instrumento02.jpg" alt="teclado" width="200px"></center></td>
+				<td><center>Teclado Arranjador Yamaha Psr Sx600</center></td>
+				<td><center>Versátil e moderno, o teclado é o coração criativo do estúdio. Capaz de reproduzir desde pianos clássicos até sintetizadores complexos, ele abre um universo de possibilidades sonoras, permitindo criar atmosferas únicas e explorar diferentes estilos musicais.</center></td>	
+			</tr>
+			<tr>
+				<td><center><img src="Imagens/Instrumento03.jpg" alt="sanfona" width="200px"></center></td>
+				<td><center>Acordeom/sanfona/gaita Todeskini 80 Baixos 7 Registros Novo </center></td>
+				<td><center>A sanfona carrega a essência da tradição e da cultura popular. Seu som vibrante e expressivo preenche o ambiente com personalidade, sendo ideal para dar vida a ritmos regionais e adicionar um toque autêntico às produções.</center></td>
+			</tr>	
+			<tr>
+				<td><center><img src="Imagens/instrumento04.jpg" alt="violino" width="200px"></center></td>
+				<td><center>Violino Voik V4-1A 4/4 terracota acabamento brilhante</center></td>
+				<td><center>Elegante e emocional, o violino traz profundidade e sofisticação ao estúdio. Seu timbre marcante é capaz de transmitir desde melancolia até intensidade dramática, enriquecendo qualquer arranjo com uma camada de pura expressividade.</center></td>
+			<tr>
+				<td><center><img src="Imagens/instrumento05.jpg" alt="saxofone" width="200px"></center></td>
+				<td><center>Custom Saxofone Alto Laqueado Eb Mi Bemol Case</center></td>
+				<td><center>O saxofone é puro sentimento em forma de som. Com sua sonoridade aveludada e envolvente, ele transita com facilidade entre o jazz, o pop e o soul, adicionando charme e identidade às gravações.</center></td>
+			</tr>
+			<tr>
+				<td><center><img src="Imagens/instrumento06.png" alt="Bateria" width="200px"></center></td>
+				<td><center>Bateria Acústica Musical Michael Trinity Dmt322</center></td>
+				<td><center>A bateria é a base rítmica que sustenta toda a produção. Com energia e precisão, ela dita o pulso da música, garantindo impacto, dinâmica e movimento em cada faixa produzida no estúdio.</center></td>
+			</tr>
+			<tr>
+				<td><center><img src="Imagens/instrumento07.jpg" alt="Guitarra" width="200px"></center></td>
+				<td><center>Guitarra elétrica Tagima</center></td>
+				<td><center>A guitarra é sinônimo de atitude e versatilidade. Dos riffs marcantes aos solos cheios de personalidade, ela se adapta a diversos estilos, trazendo força, emoção e identidade sonora às produções.</center></td>
+			</tr>
+			</table>
+		</div>
+		</div>
+	</main>
+	<br>
+	<footer>
+		<small>
+			<center>
+			<ul class="foot">
+				<li><a href="#">Políticas de privacidade</a></li>
+				<li><a href="#">Políticas de Inteligência artificial</a></li>
+				<li><a href="#">Termos de uso</a></li>
+			</ul>
+			</center>
+			<div class="redes sociais">
+			<center>
+				<a href="https://instagram.com/alisommusic"><img src="Imagens/instagram.png" alt="instagram" width="30px"></a>
+				<a href="#"><img src="Imagens/spotify.png" alt="instagram" width="30px"></a>
+			</center>
+			</div>
+			<p class="foo"><center>© 2026 Alisom Produções Artísticas. Todos os direitos reservados</center></p>
+		</small>
+		<br>
+	</footer>
+
+</body>
+</html>

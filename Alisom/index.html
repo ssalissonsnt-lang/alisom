@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Carrois+Gothic">
+	<title>Alisom</title>
+	<style>
+
+		* {
+			box-sizing: border-box;
+			margin: 0px;
+			padding: 0px;
+			font-family: Carrois Gothic;
+		}
+
+		header {
+			background-color: #000000;
+			display: flex;
+  			justify-content: center;
+ 			align-items: center;
+ 			padding: 10px;
+		}
+
+		nav {
+			position: -webkit-sticky;
+			position: sticky;
+			top: 0;
+ 			z-index: 1000;
+  			width: 100%;
+		}
+
+		nav ul {
+  			display: flex;
+  			justify-content: center;
+  			list-style: none;
+  			padding: 0;
+  			margin: 0;
+		}
+
+		ul.navegador {
+			list-style-type: none;
+			overflow: hidden;
+			background-color: #fc0000;
+		}
+
+		ul.navegador li{
+			float: left;
+		}
+
+		nav li a{
+			display: block;
+			color: #FFFFFF;
+			font-size: 20px;
+			padding: 18px 20px;
+			text-decoration: none;
+    		position: relative;
+		}
+
+		nav li a:hover:not(.active){
+			color: #000000;
+		}
+
+		nav li a::after{
+			content: '';
+    		position: absolute;
+    		width: 0;
+   	 		height: 2px;
+    		bottom: 0;
+    		left: 50%;
+    		background-color: #FFFFFF;
+    		transition: all 0.3s ease;
+			text-decoration: underline; 
+			color: #fc0000;
+		}
+
+		nav li a:hover::after{
+			width: 100%;
+    		left: 0;
+		}
+
+		body {
+			background-image: url(Imagens/studio.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			display: flex;
+ 			flex-direction: column;
+		}
+
+		main {
+			color: #ff9100;
+			margin-left: 20%;
+			margin-right: 20%;
+			padding: 20px;
+		}
+
+		h1, p {
+			margin: 3%;
+			paddin: 2px;
+		}
+
+
+		div.textoum {
+			margin-top: 2%;
+			background-color: #000000;
+			border-radius: 10px;
+			text-align: justify;
+			padding: 10px;
+		}
+
+		div.textodois {
+			margin-top: 2%;
+			background-color: #000000;
+			text-align: justify;
+			border-radius: 10px;
+			padding: 10px;
+		}
+
+			audio {
+    		width: 100%;
+    		max-width: 500px;
+    		height: 40px;
+    		filter: sepia(20%) saturate(70%) grayscale(1) contrast(99%) invert(100%);
+    		border-radius: 20px;
+		}
+
+		input[type="text"], input[type="email"], input[type="date"], input[type="time"], select {
+			padding: 10px;
+    		border: 2px solid #ccc;   
+    		border-radius: 5px;       
+    		box-sizing: border-box;
+    		background-color: #000000;
+    		color: #FFFFFF;    
+}
+
+		textarea {
+    		border: 2px solid #ccc;     /* Borda padrão */
+    		width: 500px;
+    		border-radius: 4px;         /* Bordas arredondadas */
+    		background-color: #f8f8f8;  /* Cor de fundo */
+    		font-size: 20px;
+    		height: 750px;
+    		background-color: #000000;
+    		color: #FFFFFF;            /* Tamanho da fonte */
+    		resize: vertical;           
+}
+
+		div.field, div.field2, div.field3 {
+			margin-top: 2%;
+			background-color: #000000;
+			border-radius: 10px;
+			padding: 10px;
+		}
+
+		footer{ 
+			background-color: #fc0000;
+			color: white;
+			width: 100%;
+			flex-shrink: 0px;
+		}
+
+		ul.foot {
+			margin: 0;
+			padding: 10px;
+		}
+
+		ul.foot li a {
+			text-decoration: none;
+			color: #FFFFFF;
+		}
+
+
+			@media screen and (max-width: 900px) {
+				ul.navegador li{float: none;}
+				ul.navegador li a{font-family: Carrois Gothic;}
+
+		nav ul {
+			flex-direction: column;
+  			align-items: center;
+  			list-style: none;
+  			padding: 0;
+  			margin: 0;
+			}
+
+
+			h1 {
+			text-align: center;
+			}
+
+			main {
+			color: #ff9100;
+			margin-left: 10%;
+			margin-right: 10%;
+			padding: 20px;
+			}
+
+			div.textoum {
+			margin-top: 2%;
+			width: 100%;
+			}
+
+			div.textodois {
+			margin-top: 2%;
+			width: 100%;
+			}
+
+			div.field, div.field2 {
+			margin-top: 2%;
+			width: 100%;
+			}
+
+			audio {
+			width: 100%;
+			}
+
+			fieldset, form, textarea, input {
+			width: 100%;
+			}
+		}
+	</style>
+</head>
+<body>
+	<header>
+	<div class="container">
+		<a href="Index.html" id="logo" class="logo"><img src="Imagens/Alisom2.png" alt="Alisom" width="200px"></a>
+	</div>
+	</header>
+	<nav>
+		<ul class="navegador">
+			<li><a href="Index.html">Início</a></li>
+			<li><a href="Estudio.html">Conheça nosso estúdio</a></li>
+			<li><a href="Contato.html">Contato</a></li>
+		</ul>
+	</nav>
+	<main>
+		<div class="textoum">
+		<h1>Quem Somos</h1>
+				<p>A Alisom Produções Artísticas é uma empresa dedicada à criação, desenvolvimento e produção musical, com o objetivo de transformar ideias em experiências sonoras marcantes. Trabalhamos com paixão pela música e atenção aos detalhes, oferecendo soluções profissionais para artistas, criadores de conteúdo, empresas e projetos audiovisuais que buscam qualidade, originalidade e identidade sonora.</p>
+			</div>
+		<div class="textodois">
+			<h1>Missão, Visão e Valores</h1>
+			<p>Nossa missão é cuidar de cada detalhe ao transformar o talento e a musicalidade dos artistas que passam por nós em produções de alto nível.</p>
+			<p>Nossa visão é ser reconhecido como uma empresa que fortalece as identidades artísticas únicas, tornando a Alisom uma referência em qualidade.</p>
+			<p>Nossos valores são profissionalismo, identidade, autenticidade e musicalidade.</p>
+		</div>
+		<div class="field">
+			<h1>Ouça algumas de nossas produções</h1>
+			<fieldset>
+			<p>Não Me Conformo
+			<br>
+			<audio controls>
+  			<source src="Audios/Nao Me Conformo.mp3" type="audio/mpeg"><
+			</audio>
+			</p>
+			<br>
+			<p>Última Opção
+			<br>
+			<audio controls>
+			<source src="" type="audiom/mpeg">
+			</audio>
+			</p>
+			<br>
+			<p>Universo Particular
+			<br>
+			<audio controls>
+			<source src="" type="audiom/mpeg">
+			</audio>
+			</p>
+			<br>
+			<p>Calendário
+			<br>
+			<audio controls>
+			<source src="" type="audiom/mpeg">
+			</audio>
+			</p>
+			</fieldset>
+		</div>
+		<div class="field2">
+			<h1>Envie suas composições</h1>
+			<fieldset>
+				<p><form action="/upload" method="post" enctype="multipart/form-data"></form></p>
+				<p>Título:<br><input type="text" name="titulo" placeholder="Título da música" size="35"></p>
+				<br>
+				<p>Nome(s):<br><input type="text" name="nome" placeholder="Nome(s) do(s) compositor(es)" size="80"></p>
+				<br>
+				<p>E-mail:<br><input type="email" name="email" placeholder="E-mail" size="50"></p>
+				<br>
+				<p>Letra:<br><textarea name="mensagem" rows="20" cols="30"></textarea></p>
+				<br>
+  				<p>Arquivo mp3:<br><input type="file" name="fileToUpload" id="fileToUpload"></p>
+  				<br>
+  				<br>
+  				<p><input type="submit" value="Enviar Arquivo" name="submit" style="background-color: #fc0000; padding: 10px 20px; color: white;cursor: pointer; border-radius: 5px; display: inline-block;"></p>
+				</form>
+			</fieldset>
+		</div>
+		<div class="field3">
+			<h1>Faça seu agendamento no nosso estúdio</h1>
+			<fieldset>
+				<form action="/enviar-agendamento" method="POST">
+    				<p><label for="nome">Nome:</label>
+    					<input type="text" id="nome" name="nome" required></p>
+
+    				<p><label for="nome">Celular:</label>
+    					<input type="text" id="celular" name="celular" required></p>
+
+    				<p><label for="data">Data:</label>
+    				<input type="date" id="data" name="data" required></p>
+
+    				<p><label for="hora">Horário:</label>
+    				<input type="time" id="hora" name="hora" required></p>
+
+    				<p><label for="horas">Quantas horas:</label></p>
+    				<p><select id="horas" name="horas">
+        				<option value="1 horas">1 Hora</option>
+        				<option value="2 horas">2 Horas</option>
+        				<option value="3 horas">3 Horas</option>
+    				</select>
+    				<p><input type="submit" value="Agendar" name="submit" style="background-color: #fc0000; padding: 10px 20px; color: white;cursor: pointer; border-radius: 5px; display: inline-block;"></p>
+				</form>
+		</fieldset>
+	</main>
+	<footer>
+		<small>
+			<center>
+			<ul class="foot">
+				<li><a href="#">Políticas de privacidade</a></li>
+				<li><a href="#">Políticas de Inteligência artificial</a></li>
+				<li><a href="#">Termos de uso</a></li>
+			</ul>
+			</center>
+			<div class="redes sociais">
+			<center>
+				<a href="https://instagram.com/alisommusic"><img src="Imagens/instagram.png" alt="instagram" width="30px"></a>
+				<a href="#"><img src="Imagens/spotify.png" alt="instagram" width="30px"></a>
+			</center>
+			</div>
+			<p class="foo"><center>© 2026 Alisom Produções Artísticas. Todos os direitos reservados</center></p>
+		</small>
+	</footer>
+</body>
+</html>
